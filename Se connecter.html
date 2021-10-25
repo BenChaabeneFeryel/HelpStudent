@@ -1,0 +1,168 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>HelpStudent - Connection</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+
+	</head>
+	<body class="is-preload no-sidebar">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+					<div id="header-wrapper">
+					<header id="header" class="container">
+
+						<!-- Logo -->
+							<div id="logo">
+								<video width="120" height="120" border="0" autoplay replay>
+									<source src="videos/logo.mp4" type="video/mp4">
+										Your browser does not support the video tag.
+								</video>
+								
+							</div>
+
+						<!-- Nav -->
+							<nav id="nav">
+								<ul>
+									<li><a href="index.html">Acceuil</a></li>
+									<li>
+										<a href="Devoirs.html">Devoirs</a>
+										<ul>
+											<li><a href="#">1ére année</a></li>
+											<li><a href="#">2eme année</a></li>
+											<li><a href="#">3eme année</a></li>
+											<li><a href="#">1ere année Master</a></li>
+											<li><a href="#">2eme année Master</a></li>
+										</ul>
+									</li>
+									<li><a href="Clubs.html">Clubs</a>
+										<ul>
+													<li><a href="#">Enactus ESSECT</a></li>
+													<li><a href="#">ESSECT Junior Entreprise</a></li>
+													<li><a href="#">Rotaract</a></li>
+													<li><a href="#">DMK</a></li>
+													<li><a href="#">Maseer ESSECT</a></li>
+										</ul>
+									</li>
+									<li><a href="Conseils.html">Conseils</a></li>
+									<li><a href="Architecture.html">Architecture</a></li>
+									<li class="current"><a href="Se connecter.html">Se connecter</a></li>
+								</ul>
+							</nav>
+
+					</header><br><br>
+
+			<!-- Main -->
+				<div id="main-wrapper">
+					<div class="container">
+						<div id="content">
+
+							<!-- Content -->
+							<div id="container_connect">
+
+								<h2>Se Connecter</h2>
+								<!-- zone de connexion -->
+								<form action="verification.php" method="POST">
+					               
+					                
+					                <label><b>Nom d'utilisateur</b></label>
+					                <input type="text" placeholder="Entrer le nom d'utilisateur" name="username" required>
+
+					                <label><b>Mot de passe</b></label>
+					                <input type="password" placeholder="Entrer le mot de passe" name="password" required>
+
+					                <input type="submit" id='submit' value='LOGIN' >
+					                <?php
+					                if(isset($_GET['erreur'])){
+					                    $err = $_GET['erreur'];
+					                    if($err==1 || $err==2)
+					                        echo "<p style='color:red'>Utilisateur ou mot de passe incorrect</p>";
+					                }
+					                ?>
+					            </form>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+			<!-- Footer -->
+				<div id="footer-wrapper">
+					<footer id="footer" class="container">
+						<div class="row">
+							<div class="col-3 col-6-medium col-12-small">
+
+								<!-- Links -->
+									<section class="widget links">
+										<h3>Navigation</h3>
+										<ul class="style2">
+											<li><a href="#">1ére année</a></li>
+											<li><a href="#">2éme année</a></li>
+											<li><a href="#">3éme année</a></li>
+											<li><a href="#">1ére année Mastere</a></li>
+											<li><a href="#">2éme année Mastere</a></li>
+										</ul>
+									</section>
+
+							</div>
+							<div class="col-3 col-6-medium col-12-small">
+
+								<!-- Links -->
+									<section class="widget links">
+										<h3>HelpStudent</h3>
+										<ul class="style2">
+											<li><a href="#">A propos de nous</a></li>
+											<li><a href="#">Contact</a></li>
+											<li><a href="#"></a></li>
+										</ul>
+									</section>
+
+							</div>
+							
+							<div class="col-3 col-6-medium col-12-small">
+
+								<!-- Contact -->
+									<section class="widget contact">
+										<h3>Contact Us</h3>
+										<ul>
+											<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+											<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+											<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+											<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
+											<li><a href="#" class="icon brands fa-pinterest"><span class="label">Pinterest</span></a></li>
+										</ul>
+										<p>1234 Fictional Road<br />
+										Nashville, TN 00000<br />
+										(800) 555-0000</p>
+									</section>
+
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-12">
+								<div id="copyright">
+									<ul class="menu">
+										<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</footer>
+				</div>
+
+			</div>
+
+		<!-- Scripts -->
+
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
